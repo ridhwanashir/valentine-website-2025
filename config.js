@@ -5,11 +5,11 @@
 const CONFIG = {
     // Your Valentine's name that will appear in the title
     // Example: "Jade", "Sarah", "Mike"
-    valentineName: "Jade",
+    valentineName: "Shafira",
 
     // The title that appears in the browser tab
     // You can use emojis! 💝 💖 💗 💓 💞 💕
-    pageTitle: "Will You Be My Valentine? 💝",
+    pageTitle: "Will You Be My Girlfriend? 💝",
 
     // Floating emojis that appear in the background
     // Find more emojis at: https://emojipedia.org
@@ -20,22 +20,48 @@ const CONFIG = {
 
     // Questions and answers
     // Customize each question and its possible responses
+    photos: {
+        question1: "", // URL for photo on first question page
+        question2: "", // URL for photo on love meter page
+        animatedText: "", // URL for photo on animated text page
+        question3: ""  // URL for photo on final question page
+    },
     questions: {
         first: {
-            text: "Do you like me?",                                    // First interaction
-            yesBtn: "Yes",                                             // Text for "Yes" button
-            noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+            text: "Do you like me?",
+            yesBtn: "Yes",
+            noBtn: "No",
+            secretAnswer: "I don't like you, I love you! ❤️"
         },
         second: {
-            text: "How much do you love me?",                          // For the love meter
-            startText: "This much!",                                   // Text before the percentage
-            nextBtn: "Next ❤️"                                         // Text for the next button
+            text: "How much do you love me?",
+            startText: "This much!",
+            nextBtn: "Next ❤️"
+        },
+        animatedText: {
+            text: [
+                "I love you more than words can say.",
+                "You've made my life brighter and happier.",
+                "I can't imagine a day without you.",
+                "I love you more than words can say.",
+                "You've made my life brighter and happier.",
+                "I can't imagine a day without you.",
+                "I love you more than words can say.",
+                "You've made my life brighter and happier.",
+                "I can't imagine a day without you.",
+                "I love you more than words can say.",
+                "You've made my life brighter and happier.",
+                "I can't imagine a day without you.",
+                "I love you more than words can say.",
+                "You've made my life brighter and happier.",
+                "I can't imagine a day without you.",
+            ],
+            continueBtn: "Continue ❤️"
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2025? 🌹", // The big question!
-            yesBtn: "Yes!",                                             // Text for "Yes" button
-            noBtn: "No"                                                 // Text for "No" button
+            text: "Will you be my girlfriend on March 11th, 2025? 🌹",
+            yesBtn: "Yes!",
+            noBtn: "No"
         }
     },
 
@@ -50,7 +76,7 @@ const CONFIG = {
     // Messages that appear after they say "Yes!"
     celebration: {
         title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
-        message: "Now come get your gift, a big warm hug and a huge kiss!",
+        message: "Now come get your gift and a big warm hug!",
         emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
     },
 
@@ -78,7 +104,7 @@ const CONFIG = {
     music: {
         enabled: true,                     // Music feature is enabled
         autoplay: true,                    // Try to autoplay (note: some browsers may block this)
-        musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // Music streaming URL
+        musicUrl: "https://rr4---sn-hvcp4vox8o-i5oz.googlevideo.com/videoplayback?expire=1741638248&ei=CPbOZ7WjE4-OvcAPlIDNyQM&ip=2402%3A9d80%3A855%3Ac960%3A9940%3A189f%3A6e9b%3A7e5e&id=o-AGLkN60urO7X8KhLbrcs6Fi-KopEK1P7ToF7VmxZJTYv&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1741616648%2C&mh=U5&mm=31%2C29&mn=sn-hvcp4vox8o-i5oz%2Csn-i3b7knsl&ms=au%2Crdu&mv=m&mvi=4&pcm2cms=yes&pl=44&rms=au%2Cau&initcwndbps=1476250&bui=AUWDL3xR4USaAsf-Nll2veAlYM9IKjhR72SADrYZ64GmBzwGDU_zY1HX_-iSyxcsgnd_mkRAhIR2tSkD&spc=RjZbSfWyhNftagWDTGpZyTngvtDamkhQLFoz2zL7Ie9ElGZ6ax4YbRW5n6EKhNx-GEH2rQ&vprv=1&svpuc=1&xtags=heaudio%3Dtrue&mime=video%2Fmp4&ns=kvib7SqOJPr-DcpK-dYf9TkQ&rqh=1&cnr=14&ratebypass=yes&dur=182.137&lmt=1733104948283301&mt=1741616232&fvip=4&fexp=51326932%2C51331020%2C51358317%2C51411871&c=MWEB&sefc=1&txp=4438434&n=8TYCnW93VHvdFw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cxtags%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Crms%2Cinitcwndbps&lsig=AFVRHeAwRAIgDkqBOM8q12vGuW_HfjXMSHXPFdViFsNnlwnEIbClxO8CIAag9IoPmwB6B8hIV5NX88qjOQet3dJ_98YNMLIrBVoq&sig=AJfQdSswRgIhAJdkIp-he106W4Dstpw1F3FN4lEtpasoqXqTOEKe0nlBAiEA9sgnljSCFVQexH0WztrCOUrDjxPHvmOY_TIV2D96kW8%3D&title=Reality%20Club%20-%20Oh%2C%20Bella%20(Official%20Lyric%20Video)", // Music streaming URL
         startText: "🎵 Play Music",        // Button text to start music
         stopText: "🔇 Stop Music",         // Button text to stop music
         volume: 0.5                        // Volume level (0.0 to 1.0)

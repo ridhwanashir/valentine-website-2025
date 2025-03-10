@@ -31,10 +31,10 @@
 
         <!-- First Question -->
         <div class="question-section" id="question1">
+            <div id="photo1" class="photo-container"></div>
             <h2 id="question1Text"></h2>
             <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn1"></button>
-            <!-- CUSTOMIZE: Secret answer text -->
             <div class="secret-answer">
                 <button class="cute-btn special" onclick="showNextQuestion(2)" id="secretAnswerBtn"></button>
             </div>
@@ -42,8 +42,8 @@
 
         <!-- Second Question (Love Meter) -->
         <div class="question-section hidden" id="question2">
+            <div id="photo2" class="photo-container"></div>
             <h2 id="question2Text"></h2>
-            <!-- Love meter settings: min="0" max="10000" -->
             <div class="love-meter">
                 <input type="range" min="0" max="10000" value="100" class="slider" id="loveMeter">
                 <p>
@@ -51,11 +51,19 @@
                     <span id="extraLove" class="hidden"></span>
                 </p>
             </div>
-            <button class="cute-btn" onclick="showNextQuestion(3)" id="nextBtn"></button>
+            <button class="cute-btn" onclick="showAnimatedText()" id="nextBtn"></button>
+        </div>
+
+        <!-- Animated Text Section -->
+        <div class="question-section hidden" id="animatedTextSection">
+            <div id="photoAnimated" class="photo-container"></div>
+            <div id="animatedText" class="animated-text"></div>
+            <button class="cute-btn" onclick="showNextQuestion(3)" id="continueBtn"></button>
         </div>
 
         <!-- Final Question -->
         <div class="question-section hidden" id="question3">
+            <div id="photo3" class="photo-container"></div>
             <h2 id="question3Text"></h2>
             <button class="cute-btn final-yes" onclick="celebrate()" id="yesBtn3"></button>
             <button class="cute-btn" onclick="moveButton(this)" id="noBtn3"></button>

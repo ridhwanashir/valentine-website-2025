@@ -71,6 +71,23 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('question2Text').textContent = config.questions.second.text;
     document.getElementById('startText').textContent = config.questions.second.startText;
     document.getElementById('nextBtn').textContent = config.questions.second.nextBtn;
+
+    // Add photos if provided
+    if (config.photos.question1) {
+        document.getElementById('photo1').innerHTML = `<img src="${config.photos.question1}" alt="Photo 1">`;
+    }
+    if (config.photos.question2) {
+        document.getElementById('photo2').innerHTML = `<img src="${config.photos.question2}" alt="Photo 2">`;
+    }
+    if (config.photos.animatedText) {
+        document.getElementById('photoAnimated').innerHTML = `<img src="${config.photos.animatedText}" alt="Animated Text Photo">`;
+    }
+    if (config.photos.question3) {
+        document.getElementById('photo3').innerHTML = `<img src="${config.photos.question3}" alt="Photo 3">`;
+    }
+
+    // Set animated text continue button text
+    document.getElementById('continueBtn').textContent = config.questions.animatedText.continueBtn;
     
     // Set third question texts
     document.getElementById('question3Text').textContent = config.questions.third.text;
@@ -172,6 +189,22 @@ loveMeter.addEventListener('input', () => {
 // Initialize love meter
 window.addEventListener('DOMContentLoaded', setInitialPosition);
 window.addEventListener('load', setInitialPosition);
+
+// / Add this function
+function showAnimatedText() {
+    document.querySelectorAll('.question-section').forEach(q => q.classList.add('hidden'));
+    const animatedSection = document.getElementById('animatedTextSection');
+    animatedSection.classList.remove('hidden');
+    const animatedTextElement = document.getElementById('animatedText');
+    animatedTextElement.innerHTML = ''; // Clear previous content
+
+    config.questions.animatedText.text.forEach((sentence, index) => {
+        const p = document.createElement('p');
+        p.textContent = sentence;
+        p.style.animationDelay = `${index * 1}s`; // Stagger animations by 1 second
+        animatedTextElement.appendChild(p);
+    });
+}
 
 // Celebration function
 function celebrate() {
