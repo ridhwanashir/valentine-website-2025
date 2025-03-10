@@ -201,7 +201,7 @@ function showAnimatedText() {
     config.questions.animatedText.text.forEach((sentence, index) => {
         const p = document.createElement('p');
         p.textContent = sentence;
-        p.style.animationDelay = `${index * 1}s`; // Stagger animations by 1 second
+        p.style.animationDelay = `${index * 2.1}s`; // Stagger animations by 1 second
         animatedTextElement.appendChild(p);
     });
 }

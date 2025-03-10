@@ -40,10 +40,10 @@ const CONFIG = {
         },
         animatedText: {
             text: [
-                "A Tenth Chapter of Us",
+                "'A Tenth Chapter of Us'",
                 " ",
                 "On a cool December night,",
-                "under twinkling stars at Teru,",
+                "under twinkling stars of Jakarta,",
                 "our eyes first met—a spark",
                 "igniting a journey of shared laughter and whispered dreams.",
                 "",
