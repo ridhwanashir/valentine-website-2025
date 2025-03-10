@@ -339,7 +339,7 @@ h2 {
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeInUp 1s ease forwards;
+    animation: fadeInUp 1.7s ease forwards;
 }
 
 @keyframes fadeInUp {
